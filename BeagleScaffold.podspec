@@ -45,12 +45,12 @@ Pod::Spec.new do |spec|
 # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   tag = spec.version.to_s
-  source = { :path => "", :tag => tag }
+  source = { :git => "https://github.com/jacoabreuzup/beagle-libs.git", :tag => tag }
   spec.source = source
 
 # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  # ――― Beagle UI ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  # ――― Beagle Scaffold ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   
   spec.subspec 'BeagleScaffold' do |beagleScaffold|
     path_source = 'BeagleScaffold/Sources'
@@ -74,8 +74,6 @@ Pod::Spec.new do |spec|
     # We need this because we fixed an issue in the original repository and our PR was not merged yet.
     
     beagleScaffold.frameworks = 'Foundation', 'CoreData'
-    beagleScaffold.dependency 'YogaKit'
-    beagleScaffold.dependency 'BeagleSchema', "#{spec.version}"
     beagleScaffold.dependency 'Beagle'
   end
   
