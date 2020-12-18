@@ -68,10 +68,6 @@ Pod::Spec.new do |spec|
       path_source + "/**/Tests/**/*.swift",
       path_source + "/**/*Test*.swift"
     ]
-
-    # make sure to declare YogaKit on your Podfile as:
-    # pod 'YogaKit', :git => 'https://github.com/ZupIT/YogaKit'
-    # We need this because we fixed an issue in the original repository and our PR was not merged yet.
     
       beagleDefaults.frameworks = 'Foundation', 'CoreData'
       beagleDefaults.dependency 'Beagle'
