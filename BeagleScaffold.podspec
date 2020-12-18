@@ -59,10 +59,6 @@ Pod::Spec.new do |spec|
       path_source + '/**/*.swift'
     ]
 
-    beagleScaffold.resources = [
-      "**/*.xcdatamodeld"
-    ]
-
     beagleScaffold.exclude_files = [
       path_source + "/**/Test/**/*.swift",
       path_source + "/**/Tests/**/*.swift",
@@ -73,7 +69,7 @@ Pod::Spec.new do |spec|
     # pod 'YogaKit', :git => 'https://github.com/ZupIT/YogaKit'
     # We need this because we fixed an issue in the original repository and our PR was not merged yet.
     
-    beagleScaffold.frameworks = 'Foundation', 'CoreData'
+    beagleScaffold.frameworks = 'Foundation'
     beagleScaffold.dependency 'Beagle'
   end
   
